@@ -9,7 +9,7 @@
 
 #include "dynamic_list.h"
 
-// función que crea una
+// función que crea una lista
 void createEmptyList(tList *L) {
     *L = LNULL;
 }
@@ -18,6 +18,7 @@ bool isEmptyList(tList L) {
     return L == LNULL;
 }
 
+//Funcion que devuelve el primer nodo.
 tPosL first(tList L) {
     return L;
 }
