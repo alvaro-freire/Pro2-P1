@@ -1,0 +1,4 @@
+C:/Users/Admin/CLionProjects/Pro2-P1/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Admin/CLionProjects/Pro2-P1/cmake-build-debug/CMakeFiles/main.dir
+C:/Users/Admin/CLionProjects/Pro2-P1/cmake-build-debug/CMakeFiles/test_lists.dir
+C:/Users/Admin/CLionProjects/Pro2-P1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
