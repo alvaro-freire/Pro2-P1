@@ -18,6 +18,7 @@ bool isEmptyList(tList L) {
     return L == LNULL;
 }
 
+// función que devuelve el primer nodo de la lista recibida
 tPosL first(tList L) {
     return L;
 }
