@@ -9,7 +9,7 @@
 
 #include "dynamic_list.h"
 
-// función que crea una
+// función que crea una función
 void createEmptyList(tList *L) {
     *L = LNULL;
 }
