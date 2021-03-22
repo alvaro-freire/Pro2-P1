@@ -22,7 +22,7 @@ bool isEmptyList(tList L) {
 tPosL first(tList L) {
     return L;
 }
-
+//Funcion que devuelve el ultimo nodo con items de la lista.
 tPosL last(tList L) {
     tPosL aux;
     for (aux = L; aux->next != LNULL; aux = aux->next);
