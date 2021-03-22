@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "C:/Users/Admin/CLionProjects/Pro2-P1/dynamic_list.c" "C:/Users/Admin/CLionProjects/Pro2-P1/cmake-build-debug/CMakeFiles/main.dir/dynamic_list.c.obj"
-  "C:/Users/Admin/CLionProjects/Pro2-P1/main.c" "C:/Users/Admin/CLionProjects/Pro2-P1/cmake-build-debug/CMakeFiles/main.dir/main.c.obj"
+  "Z:/GEI UDC/1/2C/Pro II/PRACTICAS/practica 1/CLion/Pro2-P1/dynamic_list.c" "Z:/GEI UDC/1/2C/Pro II/PRACTICAS/practica 1/CLion/Pro2-P1/cmake-build-debug/CMakeFiles/main.dir/dynamic_list.c.obj"
+  "Z:/GEI UDC/1/2C/Pro II/PRACTICAS/practica 1/CLion/Pro2-P1/main.c" "Z:/GEI UDC/1/2C/Pro II/PRACTICAS/practica 1/CLion/Pro2-P1/cmake-build-debug/CMakeFiles/main.dir/main.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

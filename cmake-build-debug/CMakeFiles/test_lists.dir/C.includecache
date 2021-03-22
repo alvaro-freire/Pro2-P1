@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Admin/CLionProjects/Pro2-P1/dynamic_list.c
+Z:/GEI UDC/1/2C/Pro II/PRACTICAS/practica 1/CLion/Pro2-P1/dynamic_list.c
 dynamic_list.h
-C:/Users/Admin/CLionProjects/Pro2-P1/dynamic_list.h
+Z:/GEI UDC/1/2C/Pro II/PRACTICAS/practica 1/CLion/Pro2-P1/dynamic_list.h
 
-C:/Users/Admin/CLionProjects/Pro2-P1/dynamic_list.h
+Z:/GEI UDC/1/2C/Pro II/PRACTICAS/practica 1/CLion/Pro2-P1/dynamic_list.h
 types.h
-C:/Users/Admin/CLionProjects/Pro2-P1/types.h
+Z:/GEI UDC/1/2C/Pro II/PRACTICAS/practica 1/CLion/Pro2-P1/types.h
 string.h
 -
 stdbool.h
@@ -20,31 +20,31 @@ stdbool.h
 stdlib.h
 -
 
-C:/Users/Admin/CLionProjects/Pro2-P1/list/list.h
+Z:/GEI UDC/1/2C/Pro II/PRACTICAS/practica 1/CLion/Pro2-P1/list/list.h
 stdbool.h
 -
 ../types.h
-C:/Users/Admin/CLionProjects/Pro2-P1/types.h
+Z:/GEI UDC/1/2C/Pro II/PRACTICAS/practica 1/CLion/Pro2-P1/types.h
 
-C:/Users/Admin/CLionProjects/Pro2-P1/static_list.h
+Z:/GEI UDC/1/2C/Pro II/PRACTICAS/practica 1/CLion/Pro2-P1/static_list.h
 types.h
-C:/Users/Admin/CLionProjects/Pro2-P1/types.h
+Z:/GEI UDC/1/2C/Pro II/PRACTICAS/practica 1/CLion/Pro2-P1/types.h
 string.h
 -
 stdbool.h
 -
 
-C:/Users/Admin/CLionProjects/Pro2-P1/test.c
+Z:/GEI UDC/1/2C/Pro II/PRACTICAS/practica 1/CLion/Pro2-P1/test.c
 stdio.h
 -
 string.h
 -
 static_list.h
-C:/Users/Admin/CLionProjects/Pro2-P1/static_list.h
+Z:/GEI UDC/1/2C/Pro II/PRACTICAS/practica 1/CLion/Pro2-P1/static_list.h
 dynamic_list.h
-C:/Users/Admin/CLionProjects/Pro2-P1/dynamic_list.h
+Z:/GEI UDC/1/2C/Pro II/PRACTICAS/practica 1/CLion/Pro2-P1/dynamic_list.h
 list/list.h
-C:/Users/Admin/CLionProjects/Pro2-P1/list/list.h
+Z:/GEI UDC/1/2C/Pro II/PRACTICAS/practica 1/CLion/Pro2-P1/list/list.h
 
-C:/Users/Admin/CLionProjects/Pro2-P1/types.h
+Z:/GEI UDC/1/2C/Pro II/PRACTICAS/practica 1/CLion/Pro2-P1/types.h
 

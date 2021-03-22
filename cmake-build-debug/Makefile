@@ -70,10 +70,10 @@ RM = C:\Users\Admin\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\203.7717.62\
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Admin\CLionProjects\Pro2-P1
+CMAKE_SOURCE_DIR = "Z:\GEI UDC\1\2C\Pro II\PRACTICAS\practica 1\CLion\Pro2-P1"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Admin\CLionProjects\Pro2-P1\cmake-build-debug
+CMAKE_BINARY_DIR = "Z:\GEI UDC\1\2C\Pro II\PRACTICAS\practica 1\CLion\Pro2-P1\cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -102,9 +102,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Admin\CLionProjects\Pro2-P1\cmake-build-debug\CMakeFiles C:\Users\Admin\CLionProjects\Pro2-P1\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "Z:\GEI UDC\1\2C\Pro II\PRACTICAS\practica 1\CLion\Pro2-P1\cmake-build-debug\CMakeFiles" "Z:\GEI UDC\1\2C\Pro II\PRACTICAS\practica 1\CLion\Pro2-P1\cmake-build-debug\CMakeFiles\progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Admin\CLionProjects\Pro2-P1\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "Z:\GEI UDC\1\2C\Pro II\PRACTICAS\practica 1\CLion\Pro2-P1\cmake-build-debug\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target

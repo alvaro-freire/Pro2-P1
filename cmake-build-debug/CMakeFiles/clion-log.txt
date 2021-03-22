@@ -1,4 +1,4 @@
-C:\Users\Admin\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\203.7717.62\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\Admin\CLionProjects\Pro2-P1
+C:\Users\Admin\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\203.7717.62\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" "Z:\GEI UDC\1\2C\Pro II\PRACTICAS\practica 1\CLion\Pro2-P1"
 -- The C compiler identification is GNU 8.1.0
 -- Check for working C compiler: C:/mingw64/bin/gcc.exe
 -- Check for working C compiler: C:/mingw64/bin/gcc.exe - works
@@ -8,4 +8,4 @@ C:\Users\Admin\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\203.7717.62\bin\c
 -- Detecting C compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: C:/Users/Admin/CLionProjects/Pro2-P1/cmake-build-debug
+-- Build files have been written to: Z:/GEI UDC/1/2C/Pro II/PRACTICAS/practica 1/CLion/Pro2-P1/cmake-build-debug
