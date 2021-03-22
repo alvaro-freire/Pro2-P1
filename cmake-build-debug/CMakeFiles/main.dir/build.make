@@ -56,19 +56,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = C:\Users\Admin\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\203.7717.62\bin\cmake\win\bin\cmake.exe
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = C:\Users\Admin\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\203.7717.62\bin\cmake\win\bin\cmake.exe -E rm -f
+RM = "C:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "Z:\GEI UDC\1\2C\Pro II\PRACTICAS\practica 1\CLion\Pro2-P1"
+CMAKE_SOURCE_DIR = C:\Users\Hummer\CLionProjects\Pro2-P1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "Z:\GEI UDC\1\2C\Pro II\PRACTICAS\practica 1\CLion\Pro2-P1\cmake-build-debug"
+CMAKE_BINARY_DIR = C:\Users\Hummer\CLionProjects\Pro2-P1\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/main.dir/depend.make
@@ -81,29 +81,29 @@ include CMakeFiles/main.dir/flags.make
 
 CMakeFiles/main.dir/main.c.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/main.c.obj: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\GEI UDC\1\2C\Pro II\PRACTICAS\practica 1\CLion\Pro2-P1\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/main.dir/main.c.obj"
-	C:\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\main.dir\main.c.obj   -c "Z:\GEI UDC\1\2C\Pro II\PRACTICAS\practica 1\CLion\Pro2-P1\main.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Hummer\CLionProjects\Pro2-P1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/main.dir/main.c.obj"
+	C:\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\main.dir\main.c.obj   -c C:\Users\Hummer\CLionProjects\Pro2-P1\main.c
 
 CMakeFiles/main.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/main.c.i"
-	C:\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "Z:\GEI UDC\1\2C\Pro II\PRACTICAS\practica 1\CLion\Pro2-P1\main.c" > CMakeFiles\main.dir\main.c.i
+	C:\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Hummer\CLionProjects\Pro2-P1\main.c > CMakeFiles\main.dir\main.c.i
 
 CMakeFiles/main.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/main.c.s"
-	C:\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "Z:\GEI UDC\1\2C\Pro II\PRACTICAS\practica 1\CLion\Pro2-P1\main.c" -o CMakeFiles\main.dir\main.c.s
+	C:\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Hummer\CLionProjects\Pro2-P1\main.c -o CMakeFiles\main.dir\main.c.s
 
 CMakeFiles/main.dir/dynamic_list.c.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/dynamic_list.c.obj: ../dynamic_list.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\GEI UDC\1\2C\Pro II\PRACTICAS\practica 1\CLion\Pro2-P1\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/main.dir/dynamic_list.c.obj"
-	C:\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\main.dir\dynamic_list.c.obj   -c "Z:\GEI UDC\1\2C\Pro II\PRACTICAS\practica 1\CLion\Pro2-P1\dynamic_list.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Hummer\CLionProjects\Pro2-P1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/main.dir/dynamic_list.c.obj"
+	C:\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\main.dir\dynamic_list.c.obj   -c C:\Users\Hummer\CLionProjects\Pro2-P1\dynamic_list.c
 
 CMakeFiles/main.dir/dynamic_list.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/dynamic_list.c.i"
-	C:\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "Z:\GEI UDC\1\2C\Pro II\PRACTICAS\practica 1\CLion\Pro2-P1\dynamic_list.c" > CMakeFiles\main.dir\dynamic_list.c.i
+	C:\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Hummer\CLionProjects\Pro2-P1\dynamic_list.c > CMakeFiles\main.dir\dynamic_list.c.i
 
 CMakeFiles/main.dir/dynamic_list.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/dynamic_list.c.s"
-	C:\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "Z:\GEI UDC\1\2C\Pro II\PRACTICAS\practica 1\CLion\Pro2-P1\dynamic_list.c" -o CMakeFiles\main.dir\dynamic_list.c.s
+	C:\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Hummer\CLionProjects\Pro2-P1\dynamic_list.c -o CMakeFiles\main.dir\dynamic_list.c.s
 
 # Object files for target main
 main_OBJECTS = \
@@ -119,7 +119,7 @@ main_EXTERNAL_OBJECTS =
 ../bin/main.exe: CMakeFiles/main.dir/linklibs.rsp
 ../bin/main.exe: CMakeFiles/main.dir/objects1.rsp
 ../bin/main.exe: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="Z:\GEI UDC\1\2C\Pro II\PRACTICAS\practica 1\CLion\Pro2-P1\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable ..\bin\main.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Hummer\CLionProjects\Pro2-P1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable ..\bin\main.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\main.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -132,6 +132,6 @@ CMakeFiles/main.dir/clean:
 .PHONY : CMakeFiles/main.dir/clean
 
 CMakeFiles/main.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "Z:\GEI UDC\1\2C\Pro II\PRACTICAS\practica 1\CLion\Pro2-P1" "Z:\GEI UDC\1\2C\Pro II\PRACTICAS\practica 1\CLion\Pro2-P1" "Z:\GEI UDC\1\2C\Pro II\PRACTICAS\practica 1\CLion\Pro2-P1\cmake-build-debug" "Z:\GEI UDC\1\2C\Pro II\PRACTICAS\practica 1\CLion\Pro2-P1\cmake-build-debug" "Z:\GEI UDC\1\2C\Pro II\PRACTICAS\practica 1\CLion\Pro2-P1\cmake-build-debug\CMakeFiles\main.dir\DependInfo.cmake" --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\Hummer\CLionProjects\Pro2-P1 C:\Users\Hummer\CLionProjects\Pro2-P1 C:\Users\Hummer\CLionProjects\Pro2-P1\cmake-build-debug C:\Users\Hummer\CLionProjects\Pro2-P1\cmake-build-debug C:\Users\Hummer\CLionProjects\Pro2-P1\cmake-build-debug\CMakeFiles\main.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/main.dir/depend
 
