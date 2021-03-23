@@ -36,7 +36,7 @@
  *
  *   username: nickname del usuario a crear
  *   category: categoría (standard o premium)
- *   *L: lista con la que trabajamos
+ *   *L: lista con la que se trabaja
  *
  *   devuelve: void
  */
@@ -62,7 +62,7 @@ void newUser(tNickname username, tUserCategory category, tList *L) {
  *   Busca un usuario en la lista y si lo
  *   encuentra le añade una reproducción
  *
- *   *L: lista con la que trabajamos
+ *   *L: lista con la que se trabaja
  *   username: nickname del usuario a crear
  *   *video: string del nombre del vídeo a reproducir
  *
@@ -90,13 +90,13 @@ void play(tList *L, tNickname username, char *video) {
  *   Busca un usuario en la lista y
  *   si lo encuentra lo elimina
  *
- *   *L: lista con la que trabajamos
+ *   *L: lista con la que se trabaja
  *   username: nickname del usuario a eliminar
  *
  *   devuelve: void
  */
 void delete(tList *L, tNickname username) {
-    tPosL p = findItem(username, *L);     /* guardamos la posición del usuario en p */
+    tPosL p = findItem(username, *L);    /* se guarda la posición del usuario en p */
     char cat[NAME_LENGTH_LIMIT];
 
     if (p != LNULL) {   /* si se encuentra un usuario con el nombre recibido: */
@@ -114,15 +114,15 @@ void delete(tList *L, tNickname username) {
  *   los usuarios de la lista. Si la lista
  *   está vacía, muestra un error
  *
- *   L: lista con la que trabajamos
+ *   L: lista con la que se trabaja
  *
  *   devuelve: void
  */
 void showStats(tList L) {
     if (!isEmptyList(L)) {
-        int sUsers = 0, pUsers = 0;    /* declaramos e inicializamos a 0 el número de usuarios standard y premium */
+        int sUsers = 0, pUsers = 0;    /* se declara e inicializa a 0 el número de usuarios standard y premium */
         int sPlays = 0, pPlays = 0;    /* y el número de reproducciones standard y premium */
-        float sAverage, pAverage;      /* declaramos las medias de reproducciones por usuario */
+        float sAverage, pAverage;      /* se declaran las medias de reproducciones por usuario */
         char cat[NAME_LENGTH_LIMIT];
 
         /* bucle para contar usuarios y reproducciones: */
@@ -139,7 +139,7 @@ void showStats(tList L) {
             printf("Nick %s category %s numplays %d \n", getItem(i, L).nickname, cat, getItem(i, L).numPlay);
         }
 
-        /* calculamos las medias: */
+        /* se calculan las medias: */
         sAverage = (float) sPlays / (float) sUsers;
         pAverage = (float) pPlays / (float) pUsers;
         if (sUsers == 0)
