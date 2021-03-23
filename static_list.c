@@ -9,40 +9,99 @@
 
 #include "static_list.h"
 
-// función que crea una lista vacía
+/*
+ * Función: createEmptyList
+ * ----------------------------
+ *   Crea una lista vacía
+ *
+ *   *L: lista con la que se trabaja
+ *
+ *   devuelve: void
+ */
 void createEmptyList(tList *L) {
     L->lastPos = LNULL;
 }
 
-// función que devuelve true si la lista está vacía
-// y false si contiene algún elemento
+/*
+ * Función: isEmptyList
+ * ----------------------------
+ *   Comprueba si la lista está vacía (true)
+ *   o si contiene algún elemento (false)
+ *
+ *   L: lista con la que se trabaja
+ *
+ *   devuelve: bool (true o false)
+ */
 bool isEmptyList(tList L) {
     return L.lastPos == LNULL;
 }
 
-// función que devuelve la posición del primer nodo de la lista recibida
+/*
+ * Función: first
+ * ----------------------------
+ *   Busca la posición del primer nodo de la lista
+ *
+ *   L: lista con la que se trabaja
+ *
+ *   devuelve: la primera posición de la lista
+ */
 tPosL first(tList L) {
     return 0;
 }
 
-// función que devuelve la posición del último nodo de la lista recibida
+/*
+ * Función: last
+ * ----------------------------
+ *   Busca la posición del último nodo de la lista
+ *
+ *   L: lista con la que se trabaja
+ *
+ *   devuelve: la última posición de la lista
+ */
 tPosL last(tList L) {
     return L.lastPos;
 }
 
-// función que devuelve la siguiente posición de una recibida
+/*
+ * Función: next
+ * ----------------------------
+ *   Busca la siguiente posición al nodo recibido
+ *
+ *   p: posición de la lista para buscar su siguiente
+ *   L: lista con la que se trabaja
+ *
+ *   devuelve: la siguiente posición a la recibida
+ *   si recibe la última posición, devuelve -1
+ */
 tPosL next(tPosL p, tList L) {
     return (p == L.lastPos ? LNULL : ++p);
 }
 
-// función que devuelve la anterior posición de una recibida
+/*
+ * Función: previous
+ * ----------------------------
+ *   Busca la anterior posición al nodo recibido
+ *
+ *   p: posición de la lista para buscar su anterior
+ *
+ *   devuelve: la anterior posición a la recibida
+ */
 tPosL previous(tPosL p, tList L) {
     return --p;
 }
 
-// función que inserta un item en la posición recibida
-// devuelve true si el item fue insertado y false si no ha sido posible
-// si la posición recibida es NULL, el item se inserta en la última posición
+/*
+ * Función: insertItem
+ * ----------------------------
+ *   Inserta un item en la posición recibida
+ *   si esa posición es nula, el item se inserta en la última posición
+ *
+ *   d: item que se quiere insertar
+ *   p: posición de la lista donde se quiere insertar el item
+ *   *L: lista con la que se trabaja
+ *
+ *   devuelve: bool (true si el elemento fue insertado o false si no fue posible)
+ */
 bool insertItem(tItemL d, tPosL p, tList *L) {
     // si la lista está llena no podemos insertar:
     if (L->lastPos == MAX_ITEMS - 1)
@@ -71,26 +130,55 @@ void deleteAtPosition(tPosL p, tList *L) {
     L->lastPos--;
 }
 
-// función que recibe una posición de la lista y devuelve el item que contiene
+/*
+ * Función: getItem
+ * ----------------------------
+ *   Devuelve el item de una posición de la lista
+ *
+ *   p: posición de la lista de donde se quiere el item
+ *   L: lista con la que se trabaja
+ *
+ *   devuelve: el item de la posición indicada
+ */
 tItemL getItem(tPosL p, tList L) {
     return L.dataUser[p];
 }
 
-// función que recibe una posición y sustituye su item por el recibido
+/*
+ * Función: updateItem
+ * ----------------------------
+ *   Actualiza el item de una posición de la lista
+ *
+ *   i: nuevo item actualizado
+ *   p: posición de la lista que se quiere actualizar
+ *   *L: lista con la que se trabaja
+ *
+ *   devuelve: void
+ */
 void updateItem(tItemL i, tPosL p, tList *L) {
     L->dataUser[p] = i;
 }
 
-// función que busca un nombre de usuario en la lista
-// y devuelve la posición en la que se encuentra
+/*
+ * Función: findItem
+ * ----------------------------
+ *   Busca la posición de un nickname en la lista
+ *
+ *   n: nickname a buscar
+ *   L: lista con la que se trabaja
+ *
+ *   devuelve: la posición del nickname (-1 si no se encontró)
+ */
 tPosL findItem(tNickname n, tList L) {
     if (isEmptyList(L))
         return LNULL;
 
-    // recorremos toda la lista:
+    /* recorre toda la lista: */
     for (tPosL i = 0; i <= L.lastPos; ++i) {
         if (strcmp(L.dataUser[i].nickname, n) == 0)
             return i;
     }
+
+    /* si no se encuentra el nickname: */
     return LNULL;
 }

@@ -43,7 +43,7 @@ bool isEmptyList(tList L) {
  *
  *   L: lista con la que se trabaja
  *
- *   devuelve: la posición buscada
+ *   devuelve: la primera posición de la lista
  */
 tPosL first(tList L) {
     return L;
@@ -56,7 +56,7 @@ tPosL first(tList L) {
  *
  *   L: lista con la que se trabaja
  *
- *   devuelve: la posición buscada
+ *   devuelve: la última posición de la lista
  */
 tPosL last(tList L) {
     tPosL aux;
@@ -71,7 +71,7 @@ tPosL last(tList L) {
  *
  *   p: posición de la lista para buscar su siguiente
  *
- *   devuelve: la posición buscada
+ *   devuelve: la siguiente posición a la recibida
  */
 tPosL next(tPosL p, tList L) {
     return p->next;
@@ -83,8 +83,9 @@ tPosL next(tPosL p, tList L) {
  *   Busca la anterior posición al nodo recibido
  *
  *   p: posición de la lista para buscar su anterior
+ *   L: lista con la que se trabaja
  *
- *   devuelve: la posición buscada
+ *   devuelve: la anterior posición a la recibida
  */
 tPosL previous(tPosL p, tList L) {
     if (p == L)
