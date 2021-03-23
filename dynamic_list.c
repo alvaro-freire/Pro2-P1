@@ -14,6 +14,8 @@ void createEmptyList(tList *L) {
     *L = LNULL;
 }
 
+// función que devuelve true si la lista está vacía
+// y false si contiene algún elemento
 bool isEmptyList(tList L) {
     return L == LNULL;
 }
@@ -22,17 +24,19 @@ bool isEmptyList(tList L) {
 tPosL first(tList L) {
     return L;
 }
-//Funcion que devuelve el ultimo nodo con items de la lista.
+// función que devuelve el último nodo de la lista recibida
 tPosL last(tList L) {
     tPosL aux;
     for (aux = L; aux->next != LNULL; aux = aux->next);
     return aux;
 }
 
+// función que devuelve el siguiente nodo de una posición recibida
 tPosL next(tPosL p, tList L) {
     return p->next;
 }
 
+// función que devuelve el anterior nodo de una posición recibida
 tPosL previous(tPosL p, tList L) {
     if (p == L)
         return LNULL;
@@ -42,6 +46,9 @@ tPosL previous(tPosL p, tList L) {
     return j;
 }
 
+// función que inserta un item en la posición recibida
+// devuelve true si el item fue insertado y false si no ha sido posible
+// si la posición recibida es NULL, el item se inserta en la última posición
 bool insertItem(tItemL d, tPosL p, tList *L) {
     // declaramos un nodo auxiliar
     tPosL aux = malloc(sizeof(struct tNode));
@@ -70,6 +77,7 @@ bool insertItem(tItemL d, tPosL p, tList *L) {
     return true;
 }
 
+// función que elimina un nodo de la posición recibida
 void deleteAtPosition(tPosL p, tList *L) {
     tPosL prev;
 
@@ -91,14 +99,18 @@ void deleteAtPosition(tPosL p, tList *L) {
     prev->next = next;   // el next del anterior a p apunta al siguiente a p
 }
 
+// función que recibe una posición de la lista y devuelve el item que contiene
 tItemL getItem(tPosL p, tList L) {
     return p->dataUser;
 }
 
+// función que recibe una posición y sustituye su item por el recibido
 void updateItem(tItemL i, tPosL p, tList *L) {
     p->dataUser = i;
 }
 
+// función que busca un nombre de usuario en la lista
+// y devuelve la posición en la que se encuentra
 tPosL findItem(tNickname n, tList L) {
     if (isEmptyList(L))
         return LNULL;
