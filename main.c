@@ -29,7 +29,7 @@
 /* crea un usuario con su nickname y su categoría
  * y lo inserta en la última posición de la lista */
 void newUser(tNickname username, tUserCategory category, tList *L) {
-    if (findItem(username, *L) == LNULL) {    // si no hay ningún usuario en la lista con el nombre recibido:
+    if (findItem(username, *L) == LNULL) {    /* si no hay ningún usuario en la lista con el nombre recibido: */
         char cat[NAME_LENGTH_LIMIT];
         tItemL i;
         i.numPlay = 0;
@@ -44,8 +44,10 @@ void newUser(tNickname username, tUserCategory category, tList *L) {
         printf("+ Error: New not possible\n");
 }
 
-/* busca un usuario en la lista y si lo encuentra
- * le añade una reproducción */
+/*
+ * busca un usuario en la lista y si lo encuentra
+ * le añade una reproducción
+ */
 void play(tList *L, tNickname username, char *video) {
     tItemL i;
     tPosL p = findItem(username, *L);

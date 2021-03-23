@@ -1,4 +1,0 @@
-Z:/GEI UDC/1/2C/Pro II/PRACTICAS/practica 1/CLion/Pro2-P1/cmake-build-debug/CMakeFiles/edit_cache.dir
-Z:/GEI UDC/1/2C/Pro II/PRACTICAS/practica 1/CLion/Pro2-P1/cmake-build-debug/CMakeFiles/main.dir
-Z:/GEI UDC/1/2C/Pro II/PRACTICAS/practica 1/CLion/Pro2-P1/cmake-build-debug/CMakeFiles/test_lists.dir
-Z:/GEI UDC/1/2C/Pro II/PRACTICAS/practica 1/CLion/Pro2-P1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
