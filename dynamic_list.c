@@ -20,23 +20,23 @@ bool isEmptyList(tList L) {
     return L == LNULL;
 }
 
-// función que devuelve el primer nodo de la lista recibida
+// función que devuelve la posición del primer nodo de la lista recibida
 tPosL first(tList L) {
     return L;
 }
-// función que devuelve el último nodo de la lista recibida
+// función que devuelve la posición del último nodo de la lista recibida
 tPosL last(tList L) {
     tPosL aux;
     for (aux = L; aux->next != LNULL; aux = aux->next);
     return aux;
 }
 
-// función que devuelve el siguiente nodo de una posición recibida
+// función que devuelve la siguiente posición de una recibida
 tPosL next(tPosL p, tList L) {
     return p->next;
 }
 
-// función que devuelve el anterior nodo de una posición recibida
+// función que devuelve la anterior posición de una recibida
 tPosL previous(tPosL p, tList L) {
     if (p == L)
         return LNULL;
