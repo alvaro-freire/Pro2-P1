@@ -36,7 +36,7 @@
  *
  *   username: nickname del usuario a crear
  *   category: categoría (standard o premium)
- *   *L: lista
+ *   *L: lista con la que trabajamos
  *
  *   devuelve: void
  */
@@ -62,7 +62,7 @@ void newUser(tNickname username, tUserCategory category, tList *L) {
  *   Busca un usuario en la lista y si lo
  *   encuentra le añade una reproducción
  *
- *   *L: lista
+ *   *L: lista con la que trabajamos
  *   username: nickname del usuario a crear
  *   *video: string del nombre del vídeo a reproducir
  *
@@ -90,7 +90,7 @@ void play(tList *L, tNickname username, char *video) {
  *   Busca un usuario en la lista y
  *   si lo encuentra lo elimina
  *
- *   *L: lista
+ *   *L: lista con la que trabajamos
  *   username: nickname del usuario a eliminar
  *
  *   devuelve: void
@@ -114,7 +114,7 @@ void delete(tList *L, tNickname username) {
  *   los usuarios de la lista. Si la lista
  *   está vacía, muestra un error
  *
- *   L: lista
+ *   L: lista con la que trabajamos
  *
  *   devuelve: void
  */
