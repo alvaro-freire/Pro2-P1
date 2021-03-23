@@ -67,6 +67,7 @@ void newUser(tNickname username, tUserCategory category, tList *L) {
  *   *video: string del nombre del vídeo a reproducir
  *
  *   devuelve: void
+ *
  */
 void play(tList *L, tNickname username, char *video) {
     tItemL i;
