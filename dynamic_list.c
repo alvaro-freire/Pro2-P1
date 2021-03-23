@@ -205,7 +205,7 @@ void updateItem(tItemL i, tPosL p, tList *L) {
  */
 tPosL findItem(tNickname n, tList L) {
     if (isEmptyList(L))
-        return LNULL;   /*  */
+        return LNULL;
 
     /* recorre toda la lista: */
     for (tPosL j = L; j != LNULL; j = j->next) {
