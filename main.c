@@ -38,7 +38,7 @@
  *   category: categoría (standard o premium)
  *   *L: lista con la que se trabaja
  *
- *   devuelve: void
+ *   return: void
  */
 void newUser(tNickname username, tUserCategory category, tList *L) {
     if (findItem(username, *L) == LNULL) {
@@ -66,7 +66,7 @@ void newUser(tNickname username, tUserCategory category, tList *L) {
  *   username: nickname del usuario a crear
  *   *video: string del nombre del vídeo a reproducir
  *
- *   devuelve: void
+ *   return: void
  *
  */
 void play(tList *L, tNickname username, char *video) {
@@ -93,7 +93,7 @@ void play(tList *L, tNickname username, char *video) {
  *   *L: lista con la que se trabaja
  *   username: nickname del usuario a eliminar
  *
- *   devuelve: void
+ *   return: void
  */
 void delete(tList *L, tNickname username) {
     tPosL p = findItem(username, *L);
@@ -116,7 +116,7 @@ void delete(tList *L, tNickname username) {
  *
  *   L: lista con la que se trabaja
  *
- *   devuelve: void
+ *   return: void
  */
 void showStats(tList L) {
     if (!isEmptyList(L)) {
@@ -139,7 +139,6 @@ void showStats(tList L) {
             printf("Nick %s category %s numplays %d \n", getItem(i, L).nickname, cat, getItem(i, L).numPlay);
         }
 
-        /* se calculan las medias: */
         sAverage = (float) sPlays / (float) sUsers;
         pAverage = (float) pPlays / (float) pUsers;
         if (sUsers == 0)
