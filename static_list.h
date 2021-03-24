@@ -4,17 +4,18 @@
  * AUTHOR 1: Pablo Lago Naveiras LOGIN 1: p.lago1
  * AUTHOR 2: Álvaro Freire Ares LOGIN 2: alvaro.freirea
  * GROUP: 3.3
- * DATE: 21 / 03 / 2021
+ * DATE: 24 / 03 / 2021
  */
 
 #ifndef STATIC_LIST_H
 #define STATIC_LIST_H
-#define MAX_ITEMS 25
-#define LNULL -1
 
 #include "types.h"
 #include <string.h>
 #include <stdbool.h>
+
+#define MAX_ITEMS 25
+#define LNULL -1
 
 typedef int tPosL;
 typedef struct tList {

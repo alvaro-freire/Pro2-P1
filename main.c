@@ -4,8 +4,20 @@
  * AUTHOR 1: Pablo Lago Naveiras LOGIN 1: p.lago1
  * AUTHOR 2: Álvaro Freire Ares LOGIN 2: alvaro.freirea
  * GROUP: 3.3
- * DATE: 21 / 03 / 2021
+ * DATE: 24 / 03 / 2021
  */
+
+#ifdef STATIC_LIST
+#include "static_list.h"
+#endif
+
+#ifdef DYNAMIC_LIST
+#include "dynamic_list.h"
+#endif
+
+#ifdef TEST_LIST
+#include "list/list.h"
+#endif
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -13,20 +25,6 @@
 #include "types.h"
 
 #define MAX_BUFFER 255
-
-#ifdef STATIC_LIST
-#include "static_list.h"
-#endif
-#ifdef DYNAMIC_LIST
-
-#include "dynamic_list.h"
-
-#endif
-#ifdef TEST_LIST
-
-#include "list/list.h"
-
-#endif
 
 /*
  * Función: newUser
@@ -186,7 +184,6 @@ void processCommand(char *commandNumber, char command, char *param1, char *param
 }
 
 void readTasks(char *filename, tList *L) {
-
     FILE *df;
     char *commandNumber, *command, *param1, *param2;
 
@@ -202,7 +199,6 @@ void readTasks(char *filename, tList *L) {
             processCommand(commandNumber, command[0], param1, param2, L);
         }
         fclose(df);
-
     } else {
         printf("Cannot open file %s.\n", filename);
     }
@@ -221,6 +217,7 @@ int main(int nargs, char **args) {
         file_name = INPUT_FILE;
 #endif
     }
+
     readTasks(file_name, &L);
 
     return 0;

@@ -4,7 +4,7 @@
  * AUTHOR 1: Pablo Lago Naveiras LOGIN 1: p.lago1
  * AUTHOR 2: Álvaro Freire Ares LOGIN 2: alvaro.freirea
  * GROUP: 3.3
- * DATE: 21 / 03 / 2021
+ * DATE: 24 / 03 / 2021
  */
 
 #include "dynamic_list.h"
