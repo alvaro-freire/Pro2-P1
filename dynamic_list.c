@@ -16,7 +16,7 @@
  *
  *   *L: lista con la que se trabaja
  *
- *   devuelve: void
+ *   return: void
  */
 void createEmptyList(tList *L) {
     *L = LNULL;
@@ -25,12 +25,13 @@ void createEmptyList(tList *L) {
 /*
  * Función: isEmptyList
  * ----------------------------
- *   Comprueba si la lista está vacía (true)
- *   o si contiene algún elemento (false)
+ *   Comprueba si la lista está vacía
+ *   o si contiene algún elemento
  *
  *   L: lista con la que se trabaja
  *
- *   devuelve: bool (true o false)
+ *   return: true si la lista está vacía
+ *      false si contiene algún elemento
  */
 bool isEmptyList(tList L) {
     return L == LNULL;
@@ -43,7 +44,7 @@ bool isEmptyList(tList L) {
  *
  *   L: lista con la que se trabaja
  *
- *   devuelve: la primera posición de la lista
+ *   return: la primera posición de la lista
  */
 tPosL first(tList L) {
     return L;
@@ -56,7 +57,7 @@ tPosL first(tList L) {
  *
  *   L: lista con la que se trabaja
  *
- *   devuelve: la última posición de la lista
+ *   return: la última posición de la lista
  */
 tPosL last(tList L) {
     tPosL aux;
@@ -67,11 +68,11 @@ tPosL last(tList L) {
 /*
  * Función: next
  * ----------------------------
- *   Busca la siguiente posición al nodo recibido
+ *   Busca la siguiente posición a la recibida
  *
  *   p: posición de la lista para buscar su siguiente
  *
- *   devuelve: la siguiente posición a la recibida
+ *   return: la siguiente posición a la recibida
  */
 tPosL next(tPosL p, tList L) {
     return p->next;
@@ -80,16 +81,17 @@ tPosL next(tPosL p, tList L) {
 /*
  * Función: previous
  * ----------------------------
- *   Busca la anterior posición al nodo recibido
+ *   Busca la anterior posición a la recibida
  *
  *   p: posición de la lista para buscar su anterior
  *   L: lista con la que se trabaja
  *
- *   devuelve: la anterior posición a la recibida
+ *   return: la anterior posición a la recibida
+ *      si la posición recibida es la primera, return: NULL
  */
 tPosL previous(tPosL p, tList L) {
     if (p == L)
-        return LNULL;   /* si la posición recibida es la primera de la lista, devuelve NULL */
+        return LNULL;
 
     tPosL j;
     for (j = L; j->next != p; j = j->next);
@@ -106,28 +108,26 @@ tPosL previous(tPosL p, tList L) {
  *   p: posición de la lista donde se quiere insertar el item
  *   *L: lista con la que se trabaja
  *
- *   devuelve: bool (true si el elemento fue insertado o false si no fue posible)
+ *   return: true si el elemento fue insertado
+ *      false si la inserción no fue posible
  */
 bool insertItem(tItemL d, tPosL p, tList *L) {
-    tPosL aux;                             /* se declara un puntero a nodo auxiliar */
-    aux = malloc(sizeof(struct tNode));    /* se le reserva espacio en memoria de un nodo */
+    tPosL aux;
+    aux = malloc(sizeof(struct tNode));
 
-    /* en caso de que no sea posible reservar espacio en memoria, devuelve false */
     if (aux == LNULL)
         return false;
 
-    /* se define el nodo: */
     aux->dataUser = d;
     aux->next = LNULL;
 
-    /* se inserta el nodo: */
     if (isEmptyList(*L)) {
-        *L = aux;               /* inserta el item en la primera posición */
+        *L = aux;
     } else if (p == LNULL) {
-        last(*L)->next = aux;   /* inserta el item en la última posición */
+        last(*L)->next = aux;
     } else {
-        aux->next = p->next;            /* el siguiente nodo al auxiliar es el siguiente nodo a p */
-        p->next = aux;                  /* el siguiente nodo a p ahora es el nodo auxiliar */
+        aux->next = p->next;
+        p->next = aux;
 
         /* se insertó el nodo auxiliar en la siguiente posición a p
          * se intercambian los datos de aux con p */
@@ -140,29 +140,26 @@ bool insertItem(tItemL d, tPosL p, tList *L) {
 /*
  * Función: deleteAtPosition
  * ----------------------------
- *   Elimina un elemento de la posición recibida
+ *   Elimina el elemento de la posición recibida
  *
  *   p: posición de la lista donde queremos eliminar el elemento
  *   *L: lista con la que se trabaja
  *
- *   devuelve: void
+ *   return: void
  */
 void deleteAtPosition(tPosL p, tList *L) {
     tPosL prev;
 
-    /* si se quiere eliminar el primer nodo de la lista: */
     if (p == *L) {
         *L = (*L)->next;
         free(p);
         return;
     }
 
-    /* p es el nodo que se quiere eliminar */
+    prev = previous(p, *L);   /* se guarda en prev la dirección del anterior nodo a p */
+    tPosL next = p->next;     /* se guarda en next dirección del siguiente nodo a p */
 
-    prev = previous(p, *L);   /* se guarda en prev el anterior nodo a p */
-    tPosL next = p->next;     /* se guarda en next el siguiente nodo a p */
-
-    free(p);                  /* se libera p de la lista */
+    free(p);
 
     prev->next = next;        /* el anterior a p apunta al siguiente a p */
 }
@@ -174,7 +171,7 @@ void deleteAtPosition(tPosL p, tList *L) {
  *
  *   p: posición de la lista de donde se quiere el item
  *
- *   devuelve: el item de la posición indicada
+ *   return: el item de la posición indicada
  */
 tItemL getItem(tPosL p, tList L) {
     return p->dataUser;
@@ -188,7 +185,7 @@ tItemL getItem(tPosL p, tList L) {
  *   i: nuevo item actualizado
  *   p: posición de la lista que se quiere actualizar
  *
- *   devuelve: void
+ *   return: void
  */
 void updateItem(tItemL i, tPosL p, tList *L) {
     p->dataUser = i;
@@ -202,18 +199,17 @@ void updateItem(tItemL i, tPosL p, tList *L) {
  *   n: nickname a buscar
  *   L: lista con la que se trabaja
  *
- *   devuelve: la posición del nickname (NULL si no se encontró)
+ *   return: la posición del nickname
+ *      NULL si no se encontró
  */
 tPosL findItem(tNickname n, tList L) {
     if (isEmptyList(L))
         return LNULL;
 
-    /* recorre toda la lista: */
     for (tPosL j = L; j != LNULL; j = j->next) {
         if (strcmp(j->dataUser.nickname, n) == 0)
             return j;
     }
 
-    /* si no se encuentra el nickname: */
     return LNULL;
 }

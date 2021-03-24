@@ -41,7 +41,7 @@
  *   devuelve: void
  */
 void newUser(tNickname username, tUserCategory category, tList *L) {
-    if (findItem(username, *L) == LNULL) {    /* si no hay ningún usuario en la lista con el nombre recibido: */
+    if (findItem(username, *L) == LNULL) {
         char cat[NAME_LENGTH_LIMIT];
         tItemL i;
         i.numPlay = 0;
@@ -73,7 +73,7 @@ void play(tList *L, tNickname username, char *video) {
     tItemL i;
     tPosL p = findItem(username, *L);
 
-    if (p != LNULL) {    /* si se encuentra un usuario con el nombre recibido: */
+    if (p != LNULL) {
         i = getItem(p, *L);
         i.numPlay++;
         updateItem(i, p, L);
@@ -96,10 +96,10 @@ void play(tList *L, tNickname username, char *video) {
  *   devuelve: void
  */
 void delete(tList *L, tNickname username) {
-    tPosL p = findItem(username, *L);    /* se guarda la posición del usuario en p */
+    tPosL p = findItem(username, *L);
     char cat[NAME_LENGTH_LIMIT];
 
-    if (p != LNULL) {   /* si se encuentra un usuario con el nombre recibido: */
+    if (p != LNULL) {
         deleteAtPosition(p, L);
         getItem(p, *L).userCategory == standard ? strcpy(cat, "standard") : strcpy(cat, "premium");
         printf("* Delete: nick %s category %s numplays %d\n", username, cat, getItem(p, *L).numPlay);
@@ -120,9 +120,9 @@ void delete(tList *L, tNickname username) {
  */
 void showStats(tList L) {
     if (!isEmptyList(L)) {
-        int sUsers = 0, pUsers = 0;    /* se declara e inicializa a 0 el número de usuarios standard y premium */
-        int sPlays = 0, pPlays = 0;    /* y el número de reproducciones standard y premium */
-        float sAverage, pAverage;      /* se declaran las medias de reproducciones por usuario */
+        int sUsers = 0, pUsers = 0;
+        int sPlays = 0, pPlays = 0;
+        float sAverage, pAverage;
         char cat[NAME_LENGTH_LIMIT];
 
         /* bucle para contar usuarios y reproducciones: */

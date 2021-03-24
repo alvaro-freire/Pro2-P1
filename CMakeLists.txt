@@ -1,6 +1,6 @@
 #PLEASE, DO NOT CHANGE THIS FILE
 cmake_minimum_required(VERSION 3.5)
-project(Pro2-P1 C)
+project(P1 C)
 set(CMAKE_C_STANDARD 99)
 
 include(config.cmake)
