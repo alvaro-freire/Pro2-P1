@@ -106,6 +106,24 @@ void delete(tList *L, tNickname username) {
 }
 
 /*
+ * Función: average
+ * ----------------------------
+ *   Calcula la media de reproducciones por usuario de una categoría
+ *
+ *   nPlays: número de reproducciones de una categoría
+ *   nUsers: número de usuarios de una categoría
+ *
+ *   return: media de reproducciones por usuario
+ *      0 si el número de usuarios es 0
+ */
+float average(int nPlays, int nUsers) {
+    if (nUsers == 0)
+        return 0;
+
+    return (float) nPlays / (float) nUsers;
+}
+
+/*
  * Función: showStats
  * ----------------------------
  *   Muestra las estadísiticas de todos
@@ -120,7 +138,6 @@ void showStats(tList L) {
     if (!isEmptyList(L)) {
         int sUsers = 0, pUsers = 0;
         int sPlays = 0, pPlays = 0;
-        float sAverage, pAverage;
         char cat[NAME_LENGTH_LIMIT];
 
         /* bucle para contar usuarios y reproducciones: */
@@ -137,16 +154,9 @@ void showStats(tList L) {
             printf("Nick %s category %s numplays %d \n", getItem(i, L).nickname, cat, getItem(i, L).numPlay);
         }
 
-        sAverage = (float) sPlays / (float) sUsers;
-        pAverage = (float) pPlays / (float) pUsers;
-        if (sUsers == 0)
-            sAverage = 0;
-        if (pUsers == 0)
-            pAverage = 0;
-
         printf("Category   Users  Plays  Average\n");
-        printf("Standard   %2d    %2d     %1.2f\n", sUsers, sPlays, sAverage);
-        printf("Premium    %2d    %2d     %1.2f\n", pUsers, pPlays, pAverage);
+        printf("Standard   %2d    %2d     %1.2f\n", sUsers, sPlays, average(sPlays, sUsers));
+        printf("Premium    %2d    %2d     %1.2f\n", pUsers, pPlays, average(pPlays, pUsers));
     } else
         printf("+ Error: Stats not possible\n");
 }
