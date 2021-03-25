@@ -105,21 +105,20 @@ tPosL previous(tPosL p, tList L) {
  *      false si la inserción no fue posible
  */
 bool insertItem(tItemL d, tPosL p, tList *L) {
-    if (L->lastPos == MAX_ITEMS - 1)
+    if (L->lastPos == MAX_ITEMS - 1 || findItem(d.nickname, *L) != LNULL)
         return false;
-    else {
-        if (p == LNULL) {
-            L->lastPos++;
-            L->dataUser[L->lastPos] = d;
-        } else {
-            L->lastPos++;
-            for (tPosL i = L->lastPos; i >= p; --i) {
-                L->dataUser[i + 1] = L->dataUser[i];
-            }
-            L->dataUser[p] = d;
+
+    if (p == LNULL) {
+        L->lastPos++;
+        L->dataUser[L->lastPos] = d;
+    } else {
+        L->lastPos++;
+        for (tPosL i = L->lastPos; i >= p; --i) {
+            L->dataUser[i + 1] = L->dataUser[i];
         }
-        return true;
+        L->dataUser[p] = d;
     }
+    return true;
 }
 
 /*

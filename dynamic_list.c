@@ -115,7 +115,7 @@ bool insertItem(tItemL d, tPosL p, tList *L) {
     tPosL aux;
     aux = malloc(sizeof(struct tNode));
 
-    if (aux == LNULL)
+    if (aux == LNULL || findItem(d.nickname, *L) != LNULL)
         return false;
 
     aux->dataUser = d;
