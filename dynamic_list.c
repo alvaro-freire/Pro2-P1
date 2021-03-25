@@ -156,8 +156,8 @@ void deleteAtPosition(tPosL p, tList *L) {
         return;
     }
 
-    prev = previous(p, *L);   /* se guarda en prev la dirección del anterior nodo a p */
-    tPosL next = p->next;     /* se guarda en next dirección del siguiente nodo a p */
+    prev = previous(p, *L);
+    tPosL next = p->next;
 
     free(p);
 
