@@ -42,7 +42,6 @@ void newUser(tNickname username, tUserCategory category, tList *L) {
     if (findItem(username, *L) == LNULL) {
         char cat[NAME_LENGTH_LIMIT];
         tItemL i;
-        i.numPlay = 0;
         i.userCategory = category;
         strcpy(i.nickname, username);
 
@@ -62,12 +61,12 @@ void newUser(tNickname username, tUserCategory category, tList *L) {
  *
  *   *L: lista con la que se trabaja
  *   username: nickname del usuario a crear
- *   *video: string del nombre del vídeo a reproducir
+ *   *title: string del título del vídeo a reproducir
  *
  *   return: void
  *
  */
-void play(tList *L, tNickname username, char *video) {
+void play(tList *L, tNickname username, char *title) {
     tItemL i;
     tPosL p = findItem(username, *L);
 
@@ -75,9 +74,9 @@ void play(tList *L, tNickname username, char *video) {
         i = getItem(p, *L);
         i.numPlay++;
         updateItem(i, p, L);
-        tVideo v;
-        strcpy(v.titleVideo, video);
-        printf("* Play: nick %s plays video %s numplays %d\n", username, v.titleVideo, getItem(p, *L).numPlay);
+        tVideo video;
+        strcpy(video.titleVideo, title);
+        printf("* Play: nick %s plays video %s numplays %d\n", username, video.titleVideo, getItem(p, *L).numPlay);
     } else
         printf("+ Error: Play not possible\n");
 }
