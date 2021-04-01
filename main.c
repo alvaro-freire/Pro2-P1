@@ -42,6 +42,7 @@ void newUser(tNickname username, tUserCategory category, tList *L) {
     if (findItem(username, *L) == LNULL) {
         char cat[NAME_LENGTH_LIMIT];
         tItemL i;
+        i.numPlay = 0;
         i.userCategory = category;
         strcpy(i.nickname, username);
 
