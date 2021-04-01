@@ -4,7 +4,7 @@
  * AUTHOR 1: Pablo Lago Naveiras LOGIN 1: p.lago1
  * AUTHOR 2: Álvaro Freire Ares LOGIN 2: alvaro.freirea
  * GROUP: 3.3
- * DATE: 24 / 03 / 2021
+ * DATE: ** / 04 / 2021
  */
 
 #ifdef STATIC_LIST
@@ -65,7 +65,6 @@ void newUser(tNickname username, tUserCategory category, tList *L) {
  *   *title: string del título del vídeo a reproducir
  *
  *   return: void
- *
  */
 void play(tList *L, tNickname username, char *title) {
     tItemL i;
