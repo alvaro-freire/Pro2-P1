@@ -167,7 +167,7 @@ void processCommand(char *commandNumber, char command, char *param1, char *param
             printf("%s %c: nick %s category %s\n", commandNumber, command, param1, param2);
 
             if (param2 == NULL) {
-                param2 = param1;
+                param2 = param1;    /* Si param2 es NULL, le damos un valor para poder compararlo */
             }
 
             tUserCategory category;
