@@ -165,7 +165,17 @@ void processCommand(char *commandNumber, char command, char *param1, char *param
         case 'N': {
             printf("********************\n");
             printf("%s %c: nick %s category %s\n", commandNumber, command, param1, param2);
-            tUserCategory category = strcmp(param2, "standard") == 0 ? standard : premium;
+            tUserCategory category;
+
+            if (strcmp(param2, "standard") == 0)
+                category = standard;
+            else if (strcmp(param2, "premium") == 0)
+                category = premium;
+            else {
+                printf("+ Error: New not possible\n");
+                break;
+            }
+
             newUser(param1, category, L);
             break;
         }
