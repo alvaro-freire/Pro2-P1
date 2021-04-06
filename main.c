@@ -166,9 +166,14 @@ void processCommand(char *commandNumber, char command, char *param1, char *param
             printf("********************\n");
             printf("%s %c: nick %s category %s\n", commandNumber, command, param1, param2);
 
-            if (param2 == NULL) {
-                param2 = param1;    /* Si param2 es NULL, le damos un valor para poder compararlo */
+            if (param1 == NULL || param2 == NULL) {
+                printf("+ Error: New not possible\n");
+                break;
             }
+
+        /*    if () {
+                nick demasiado largo
+            } */
 
             tUserCategory category;
             if (strcmp(param2, "standard") == 0)
@@ -192,12 +197,24 @@ void processCommand(char *commandNumber, char command, char *param1, char *param
         case 'P': {
             printf("********************\n");
             printf("%s %c: nick %s video %s\n", commandNumber, command, param1, param2);
+
+            if (param1 == NULL || param2 == NULL) {
+                printf("+ Error: Play not possible\n");
+                break;
+            }
+
             play(L, param1, param2);
             break;
         }
         case 'D': {
             printf("********************\n");
             printf("%s %c: nick %s\n", commandNumber, command, param1);
+
+            if (param1 == NULL) {
+                printf("+ Error: Delete not possible\n");
+                break;
+            }
+
             delete(L, param1);
             break;
         }
