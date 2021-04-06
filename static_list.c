@@ -184,9 +184,9 @@ tPosL findItem(tNickname n, tList L) {
     if (isEmptyList(L))
         return LNULL;
 
-    for (tPosL pos = 0; i <= L.lastPos; ++i) {
+    for (tPosL pos = 0; pos <= L.lastPos; ++pos) {
         /* si se encuentra el nickname: */
-        if (strcmp(L.dataUser[i].nickname, n) == 0)
+        if (strcmp(L.dataUser[pos].nickname, n) == 0)
             return pos;
     }
 
