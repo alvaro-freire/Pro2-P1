@@ -92,13 +92,13 @@ void play(tList *L, tNickname username, char *title) {
  *   return: void
  */
 void delete(tList *L, tNickname username) {
-    tPosL p = findItem(username, *L);
+    tPosL pos = findItem(username, *L);
     char cat[NAME_LENGTH_LIMIT];
 
-    if (p != LNULL) {
-        deleteAtPosition(p, L);
-        getItem(p, *L).userCategory == standard ? strcpy(cat, "standard") : strcpy(cat, "premium");
-        printf("* Delete: nick %s category %s numplays %d\n", username, cat, getItem(p, *L).numPlay);
+    if (pos != LNULL) {
+        deleteAtPosition(pos, L);
+        getItem(pos, *L).userCategory == standard ? strcpy(cat, "standard") : strcpy(cat, "premium");
+        printf("* Delete: nick %s category %s numplays %d\n", username, cat, getItem(pos, *L).numPlay);
     } else
         printf("+ Error: Delete not possible\n");
 }
@@ -139,17 +139,17 @@ void showStats(tList L) {
         char cat[NAME_LENGTH_LIMIT];
 
         /* bucle para contar usuarios y reproducciones: */
-        for (tPosL i = first(L); i != next(last(L), L); i = next(i, L)) {
-            if (getItem(i, L).userCategory == standard) {
+        for (tPosL pos = first(L); pos != next(last(L), L); pos = next(pos, L)) {
+            if (getItem(pos, L).userCategory == standard) {
                 strcpy(cat, "standard");
                 sUsers++;
-                sPlays += getItem(i, L).numPlay;
+                sPlays += getItem(pos, L).numPlay;
             } else {
                 strcpy(cat, "premium");
                 pUsers++;
-                pPlays += getItem(i, L).numPlay;
+                pPlays += getItem(pos, L).numPlay;
             }
-            printf("Nick %s category %s numplays %d \n", getItem(i, L).nickname, cat, getItem(i, L).numPlay);
+            printf("Nick %s category %s numplays %d \n", getItem(pos, L).nickname, cat, getItem(pos, L).numPlay);
         }
 
         printf("Category   Users  Plays  Average\n");

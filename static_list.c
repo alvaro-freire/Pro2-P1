@@ -115,8 +115,8 @@ bool insertItem(tItemL d, tPosL p, tList *L) {
         L->dataUser[L->lastPos] = d;
     } else {
         L->lastPos++;
-        for (tPosL i = L->lastPos; i >= p; --i) {
-            L->dataUser[i + 1] = L->dataUser[i];
+        for (tPosL pos = L->lastPos; pos >= p; --pos) {
+            L->dataUser[pos + 1] = L->dataUser[pos];
         }
         L->dataUser[p] = d;
     }
@@ -128,7 +128,7 @@ bool insertItem(tItemL d, tPosL p, tList *L) {
  * ----------------------------
  *   Elimina el elemento de la posición recibida
  *
- *   p: posición de la lista donde queremos eliminar el elemento
+ *   p: posición de la lista donde se quiere eliminar el elemento
  *   *L: lista con la que se trabaja
  *
  *   return: void
@@ -184,9 +184,10 @@ tPosL findItem(tNickname n, tList L) {
     if (isEmptyList(L))
         return LNULL;
 
-    for (tPosL i = 0; i <= L.lastPos; ++i) {
+    for (tPosL pos = 0; i <= L.lastPos; ++i) {
+        /* si se encuentra el nickname: */
         if (strcmp(L.dataUser[i].nickname, n) == 0)
-            return i;
+            return pos;
     }
 
     return LNULL;

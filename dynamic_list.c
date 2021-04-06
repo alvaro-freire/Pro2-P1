@@ -60,9 +60,9 @@ tPosL first(tList L) {
  *   return: la última posición de la lista
  */
 tPosL last(tList L) {
-    tPosL aux;
-    for (aux = L; aux->next != LNULL; aux = aux->next);
-    return aux;
+    tPosL pos;
+    for (pos = L; pos->next != LNULL; pos = pos->next);
+    return pos;
 }
 
 /*
@@ -93,9 +93,11 @@ tPosL previous(tPosL p, tList L) {
     if (p == L)
         return LNULL;
 
-    tPosL j;
-    for (j = L; j->next != p; j = j->next);
-    return j;
+    tPosL pos;
+
+    /* se recorre la lista hasta llegar al anterior elemento a p: */
+    for (pos = L; pos->next != p; pos = pos->next);
+    return pos;
 }
 
 /*
@@ -112,26 +114,27 @@ tPosL previous(tPosL p, tList L) {
  *      false si la inserción no fue posible
  */
 bool insertItem(tItemL d, tPosL p, tList *L) {
-    tPosL aux;
-    aux = malloc(sizeof(struct tNode));
+    /* se crea un nodo auxiliar */
+    tPosL node;
+    node = malloc(sizeof(struct tNode));
 
-    if (aux == LNULL || findItem(d.nickname, *L) != LNULL)
+    if (node == LNULL || findItem(d.nickname, *L) != LNULL)
         return false;
 
-    aux->dataUser = d;
-    aux->next = LNULL;
+    node->dataUser = d;
+    node->next = LNULL;
 
     if (isEmptyList(*L)) {
-        *L = aux;
+        *L = node;
     } else if (p == LNULL) {
-        last(*L)->next = aux;
+        last(*L)->next = node;
     } else {
-        aux->next = p->next;
-        p->next = aux;
+        /* se inserta el nodo en la siguiente posición a p */
+        node->next = p->next;
+        p->next = node;
 
-        /* se insertó el nodo auxiliar en la siguiente posición a p
-         * se intercambian los datos de aux con p */
-        aux->dataUser = p->dataUser;
+        /* se intercambian los datos de node con p */
+        node->dataUser = p->dataUser;
         p->dataUser = d;
     }
     return true;
@@ -142,21 +145,20 @@ bool insertItem(tItemL d, tPosL p, tList *L) {
  * ----------------------------
  *   Elimina el elemento de la posición recibida
  *
- *   p: posición de la lista donde queremos eliminar el elemento
+ *   p: posición de la lista donde se quiere eliminar el elemento
  *   *L: lista con la que se trabaja
  *
  *   return: void
  */
 void deleteAtPosition(tPosL p, tList *L) {
-    tPosL prev;
-
+    /* si se quiere eliminar el primer elemento: */
     if (p == *L) {
         *L = (*L)->next;
         free(p);
         return;
     }
 
-    prev = previous(p, *L);
+    tPosL prev = previous(p, *L);
     tPosL next = p->next;
 
     free(p);
@@ -204,9 +206,10 @@ void updateItem(tItemL i, tPosL p, tList *L) {
  */
 tPosL findItem(tNickname n, tList L) {
     if (!isEmptyList(L)) {
-        for (tPosL j = L; j != LNULL; j = j->next) {
-            if (strcmp(j->dataUser.nickname, n) == 0)
-                return j;
+        for (tPosL pos = L; pos != LNULL; pos = pos->next) {
+            /* si se encuentra el nickname: */
+            if (strcmp(pos->dataUser.nickname, n) == 0)
+                return pos;
         }
     }
     return LNULL;
