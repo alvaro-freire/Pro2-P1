@@ -20,9 +20,7 @@
 #endif
 
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
-#include "types.h"
 
 #define MAX_BUFFER 255
 
