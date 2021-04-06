@@ -106,7 +106,6 @@ tPosL previous(tPosL p, tList L) {
  */
 bool insertItem(tItemL d, tPosL p, tList *L) {
     if (L->lastPos == MAX_ITEMS - 1 || findItem(d.nickname, *L) != LNULL) {
-        printf("+ Error: New not possible\n");
         return false;
     }
 
