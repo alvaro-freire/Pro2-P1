@@ -12,6 +12,7 @@
 
 #include "types.h"
 #include <string.h>
+#include <stdlib.h>
 #include <stdbool.h>
 
 #define MAX_ITEMS 25
