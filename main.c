@@ -166,14 +166,10 @@ void processCommand(char *commandNumber, char command, char *param1, char *param
             printf("********************\n");
             printf("%s %c: nick %s category %s\n", commandNumber, command, param1, param2);
 
-            if (param1 == NULL || param2 == NULL) {
+            if (param2 == NULL || strlen(param1) > NAME_LENGTH_LIMIT) {
                 printf("+ Error: New not possible\n");
                 break;
             }
-
-        /*    if () {
-                nick demasiado largo
-            } */
 
             tUserCategory category;
             if (strcmp(param2, "standard") == 0)
@@ -198,7 +194,7 @@ void processCommand(char *commandNumber, char command, char *param1, char *param
             printf("********************\n");
             printf("%s %c: nick %s video %s\n", commandNumber, command, param1, param2);
 
-            if (param1 == NULL || param2 == NULL) {
+            if (param2 == NULL) {
                 printf("+ Error: Play not possible\n");
                 break;
             }
