@@ -74,7 +74,8 @@ void play(tList *L, tNickname username, char *title) {
         updateItem(i, p, L);
         tVideo video;
         strcpy(video.titleVideo, title);
-        printf("* Play: nick %s plays video %s numplays %d\n", username, video.titleVideo, getItem(p, *L).numPlay);
+        printf("* Play: nick %s plays video %s numplays %d\n",
+               username, video.titleVideo, getItem(p, *L).numPlay);
     } else
         printf("+ Error: Play not possible\n");
 }
