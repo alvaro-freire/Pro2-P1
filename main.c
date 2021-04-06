@@ -194,7 +194,7 @@ void processCommand(char *commandNumber, char command, char *param1, char *param
             printf("********************\n");
             printf("%s %c: nick %s video %s\n", commandNumber, command, param1, param2);
 
-            if (param2 == NULL) {
+            if (param2 == NULL || strlen(param2) > NAME_LENGTH_LIMIT) {
                 printf("+ Error: Play not possible\n");
                 break;
             }
