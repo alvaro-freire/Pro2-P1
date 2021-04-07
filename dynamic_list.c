@@ -113,15 +113,15 @@ tPosL previous(tPosL p, tList L) {
  *   return: true si el elemento fue insertado
  *      false si la inserción no fue posible
  */
-bool insertItem(tItemL d, tPosL p, tList *L) {
+bool insertItem(tItemL i, tPosL p, tList *L) {
     /* se crea un nodo auxiliar */
     tPosL node;
     node = malloc(sizeof(struct tNode));
 
-    if (node == LNULL || findItem(d.nickname, *L) != LNULL)
+    if (node == LNULL || findItem(i.nickname, *L) != LNULL)
         return false;
 
-    node->dataUser = d;
+    node->dataUser = i;
     node->next = LNULL;
 
     if (isEmptyList(*L)) {
@@ -135,7 +135,7 @@ bool insertItem(tItemL d, tPosL p, tList *L) {
 
         /* se intercambian los datos de node con p */
         node->dataUser = p->dataUser;
-        p->dataUser = d;
+        p->dataUser = i;
     }
     return true;
 }

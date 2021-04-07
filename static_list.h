@@ -36,7 +36,7 @@ tPosL next(tPosL p, tList L);
 
 tPosL previous(tPosL p, tList L);
 
-bool insertItem(tItemL d, tPosL p, tList *L);
+bool insertItem(tItemL i, tPosL p, tList *L);
 
 void deleteAtPosition(tPosL p, tList *L);
 
