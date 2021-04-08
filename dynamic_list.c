@@ -4,7 +4,7 @@
  * AUTHOR 1: Pablo Lago Naveiras LOGIN 1: p.lago1
  * AUTHOR 2: Álvaro Freire Ares LOGIN 2: alvaro.freirea
  * GROUP: 3.3
- * DATE: ** / 04 / 2021
+ * DATE: 08 / 04 / 2021
  */
 
 #include "dynamic_list.h"
@@ -122,11 +122,12 @@ bool insertItem(tItemL i, tPosL p, tList *L) {
         return false;
 
     node->dataUser = i;
-    node->next = LNULL;
 
     if (isEmptyList(*L)) {
+        node->next = LNULL;
         *L = node;
     } else if (p == LNULL) {
+        node->next = LNULL;
         last(*L)->next = node;
     } else {
         /* se inserta el nodo en la siguiente posición a p */
