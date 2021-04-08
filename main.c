@@ -165,6 +165,7 @@ void processCommand(char *commandNumber, char command, char *param1, char *param
             printf("********************\n");
             printf("%s %c: nick %s category %s\n", commandNumber, command, param1, param2);
 
+            /* control de errores: param2 (categoría) NULL o param1 (nick) sobrepasa máximo nº de chars */
             if (param2 == NULL || strlen(param1) > NAME_LENGTH_LIMIT) {
                 printf("+ Error: New not possible\n");
                 break;
@@ -193,6 +194,7 @@ void processCommand(char *commandNumber, char command, char *param1, char *param
             printf("********************\n");
             printf("%s %c: nick %s video %s\n", commandNumber, command, param1, param2);
 
+            /* control de errores: param2 (video) NULL o sobrepasa máximo nº de chars */
             if (param2 == NULL || strlen(param2) > NAME_LENGTH_LIMIT) {
                 printf("+ Error: Play not possible\n");
                 break;
@@ -205,6 +207,7 @@ void processCommand(char *commandNumber, char command, char *param1, char *param
             printf("********************\n");
             printf("%s %c: nick %s\n", commandNumber, command, param1);
 
+            /* control de errores: param1 (nick) NULL */
             if (param1 == NULL) {
                 printf("+ Error: Delete not possible\n");
                 break;
