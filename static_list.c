@@ -97,7 +97,7 @@ tPosL previous(tPosL p, tList L) {
  *   Inserta un item en la posición recibida
  *   si esa posición es -1 (nula), el item se inserta en la última posición
  *
- *   d: item que se quiere insertar
+ *   i: item que se quiere insertar
  *   p: posición de la lista donde se quiere insertar el item
  *   *L: lista con la que se trabaja
  *
