@@ -37,18 +37,17 @@
  *   return: void
  */
 void newUser(tNickname username, tUserCategory category, tList *L) {
-    if (findItem(username, *L) == LNULL) {
-        char cat[NAME_LENGTH_LIMIT];
-        tItemL i;
-        i.numPlay = 0;
-        i.userCategory = category;
-        strcpy(i.nickname, username);
+    char cat[NAME_LENGTH_LIMIT];
+    tItemL i;
+    i.numPlay = 0;
+    i.userCategory = category;
+    strcpy(i.nickname, username);
 
-        category == standard ? strcpy(cat, "standard") : strcpy(cat, "premium");
+    category == standard ? strcpy(cat, "standard") : strcpy(cat, "premium");
 
-        if (insertItem(i, LNULL, L))
-            printf("* New: nick %s category %s\n", i.nickname, cat);
-    } else
+    if (insertItem(i, LNULL, L))
+        printf("* New: nick %s category %s\n", i.nickname, cat);
+    else
         printf("+ Error: New not possible\n");
 }
 
