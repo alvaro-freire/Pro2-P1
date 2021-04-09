@@ -206,12 +206,10 @@ void updateItem(tItemL i, tPosL p, tList *L) {
  *      NULL si no se encontró
  */
 tPosL findItem(tNickname n, tList L) {
-    if (!isEmptyList(L)) {
-        for (tPosL pos = L; pos != LNULL; pos = pos->next) {
-            /* si se encuentra el nickname: */
-            if (strcmp(pos->dataUser.nickname, n) == 0)
-                return pos;
-        }
+    for (tPosL pos = L; pos != LNULL; pos = pos->next) {
+        /* si se encuentra el nickname: */
+        if (strcmp(pos->dataUser.nickname, n) == 0)
+            return pos;
     }
     return LNULL;
 }
