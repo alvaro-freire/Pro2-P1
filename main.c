@@ -95,8 +95,8 @@ void delete(tList *L, tNickname username) {
     char cat[NAME_LENGTH_LIMIT];
 
     if (pos != LNULL) {
-        deleteAtPosition(pos, L);
         getItem(pos, *L).userCategory == standard ? strcpy(cat, "standard") : strcpy(cat, "premium");
+        deleteAtPosition(pos, L);
         printf("* Delete: nick %s category %s numplays %d\n", username, cat, getItem(pos, *L).numPlay);
     } else
         printf("+ Error: Delete not possible\n");
