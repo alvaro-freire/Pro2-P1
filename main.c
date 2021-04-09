@@ -138,7 +138,7 @@ void showStats(tList L) {
         char cat[NAME_LENGTH_LIMIT];
 
         /* bucle para contar usuarios y reproducciones: */
-        for (tPosL pos = first(L); pos != next(last(L), L); pos = next(pos, L)) {
+        for (tPosL pos = first(L); pos != LNULL; pos = next(pos, L)) {
             if (getItem(pos, L).userCategory == standard) {
                 strcpy(cat, "standard");
                 sUsers++;
