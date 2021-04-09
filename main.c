@@ -6,6 +6,7 @@
  * GROUP: 3.3
  * DATE: 08 / 04 / 2021
  */
+#define STATIC_LIST
 
 #ifdef STATIC_LIST
 #include "static_list.h"
@@ -139,16 +140,17 @@ void showStats(tList L) {
 
         /* bucle para contar usuarios y reproducciones: */
         for (tPosL pos = first(L); pos != LNULL; pos = next(pos, L)) {
-            if (getItem(pos, L).userCategory == standard) {
+            tItemL item = getItem(pos, L);
+            if (item.userCategory == standard) {
                 strcpy(cat, "standard");
                 sUsers++;
-                sPlays += getItem(pos, L).numPlay;
+                sPlays += item.numPlay;
             } else {
                 strcpy(cat, "premium");
                 pUsers++;
-                pPlays += getItem(pos, L).numPlay;
+                pPlays += item.numPlay;
             }
-            printf("Nick %s category %s numplays %d \n", getItem(pos, L).nickname, cat, getItem(pos, L).numPlay);
+            printf("Nick %s category %s numplays %d \n", item.nickname, cat, item.numPlay);
         }
 
         printf("Category   Users  Plays  Average\n");
