@@ -6,7 +6,6 @@
  * GROUP: 3.3
  * DATE: 08 / 04 / 2021
  */
-#define STATIC_LIST
 
 #ifdef STATIC_LIST
 #include "static_list.h"
