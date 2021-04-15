@@ -114,7 +114,7 @@ tPosL previous(tPosL p, tList L) {
  *      false si la inserción no fue posible
  */
 bool insertItem(tItemL i, tPosL p, tList *L) {
-    /* se crea un nodo auxiliar */
+    /* se crea un nodo */
     tPosL node;
     node = malloc(sizeof(struct tNode));
 
